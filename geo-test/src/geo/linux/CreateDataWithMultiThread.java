@@ -17,7 +17,7 @@ public class CreateDataWithMultiThread {
 			assignJobs[i]=totalShip*i/maxThreadNum;
 		}
 		
-		for(;threadNum<4;threadNum++){
+		for(;threadNum<maxThreadNum;threadNum++){
 			CreateDataPerThread firstThread=new CreateDataPerThread();	
 			firstThread.setShipIdRange(assignJobs[threadNum], assignJobs[threadNum+1]);
 			firstThread.setThreadId(threadNum);
